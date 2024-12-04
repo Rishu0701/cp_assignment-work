@@ -1,5 +1,7 @@
-#include<stdio.h>
+//Q1. Write a c programm if a number is perfect or not ...(sum of the factor are equal to number)?
+//Code:
 
+#include<stdio.h>
 int main (){
     int a , sum =0;
      
@@ -24,3 +26,99 @@ int main (){
     }
   return 0;
 }
+
+
+//Q2. Write a programm that will read a decimal integer and will convert to equivalent to binary number?
+//Code:
+#include <stdio.h>
+void decimaltobinary( int n){
+    int binary[50];
+    int i = 0;
+     while( n>0){
+        binary[i] = n %2 ;
+        n = n/2;
+        i++;
+     }
+     printf("In binaryy : ");
+     for (int a = i-1 ; i>=0 ;i--){
+        printf("%d\n",binary[i]);
+     }
+}
+int main ()
+{
+    int a ;
+    printf("Enter the decimal value to check : ");
+    scanf("%d",&a);
+    decimaltobinary(a);
+
+    return 0;
+
+}
+
+
+//Q3. Write a c programm to check whether a number is prime or not?
+//Code:
+
+#include<stdio.h>
+void prime()
+{
+    int a;
+    scanf("%d",&a);
+    int i=0,c=0;
+    for(i;i<a;i++)
+    {
+        if (a%i==0)
+        {
+            c=c+1;
+            if (c>2)
+            {
+                printf("THE NUMBER IS NOT PRIME");
+            }
+        }
+        else
+        {
+            printf("THE NUMBER IS PRIME");
+        }
+    }
+}
+void main()
+{
+    int a;
+    printf("enter the number ");
+    scanf("%d",&a);
+    prime;
+}
+
+//Q4. Write a program in c to print the sum of square of n natural number ?
+//Code:
+
+#include <stdio.h>
+int main() {
+	int n;
+	int sum = 0;
+	printf("Enter number  : ");
+	scanf("%d", &n);
+	for (int i = 1; i <= n; i++) {
+		int square = i * i;
+		sum = sum + square;
+	}
+	printf("The sum of square of %d integers is: %d", n, sum);
+}
+
+
+//Q5. Write a c program to print and compute e^x series up to N terms ?
+//Code:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
