@@ -28,6 +28,7 @@ int main (){
 }
 
 
+
 //Q2. Write a programm that will read a decimal integer and will convert to equivalent to binary number?
 //Code:
 #include <stdio.h>
@@ -106,8 +107,491 @@ int main() {
 }
 
 
+
 //Q5. Write a c program to print and compute e^x series up to N terms ?
 //Code:
+#include <stdio.h>
+int fact(int n) {                // function to find factorial of a number
+	int fact = 1;
+	for (int i = 1; i <= n; i++) {
+		fact = fact * i;
+	}
+	float fact_f = fact;
+	return fact_f;
+}
+int sqr(int num, int power) {       // function to raise a number num to power
+	int square = num;
+	for (int i = 1; i <= power; i++) {
+		if (i == 1) {
+			square = num;
+		}
+		else {
+			square = square * num;
+		}
+	}
+	float sqr = square;
+	return sqr;
+}
+
+int main() {
+	int x, N;
+	printf("Enter the value of number you want to calculate: ");
+	scanf("%d", &x);
+	printf("Upto how many terms do you want to calculate the series: ");
+	scanf("%d", &N);
+	float series = 1;
+	for (int i = 1; i <= N - 1; i++) {
+		float fract = sqr(x, i) / fact(i);
+		printf("%f\n", fract);
+		series = series + fract;
+	}
+	printf("\n");
+	printf("%f",series);
+}
+
+
+//Q6.Write a program to add square of two integers using function?
+//Code:
+
+#include <stdio.h>
+int main() {
+	int a;
+	int sum = 0;
+	printf("Enter a number: ");
+	scanf("%d", &a);
+	for (int i = 1; i <= a; i++) {
+		int square = i * i;
+		sum = sum + square;
+	}
+	printf("The sum of square of first %d integers is: %d", a, sum);
+}
+
+
+
+//Q7. Write a program to find the average of the two number using function  (avg)?
+//Code:
+
+#include <stdio.h>
+float avg(float num1, float num2) {  //function to find square of two numbers
+	float aveg = (num1 + num2) / 2;
+	return aveg;
+}
+int main() {
+	float n1, n2;
+	printf("enter first number: ");   //taking input from the user
+	scanf("%f", &n1);
+	printf("enter second number: ");
+	scanf("%f", &n2);
+	float med = avg(n1, n2);
+	printf("average %f", med);
+}
+
+
+//Q8.  Write a program using function to convert the char value to uppercase?
+//Code:
+#include <stdio.h>
+#include <ctype.h>
+
+char upp(char c) {      //function to capitalise letter
+	return toupper(c);
+}
+int main() {
+	char a;
+	printf("Enter a character: ");
+	scanf("%c", &a);
+	char char_up = upp(a);
+	printf("Capitalised letter is: %c ", char_up);
+}
+
+//Q9. Write a program for factorial using function?
+//Code:
+#include <stdio.h>
+int fact(int n) {                // function to fid factorial of a number
+	int fact = 1;
+	for (int i = 1; i <= n; i++) {
+		fact = fact * i;
+	}
+	float fact_f = fact;
+	return fact_f;
+}
+
+int main() {
+	int a;
+	printf("Enter the number you want to find factorial of: ");
+	scanf("%d", &a);
+	int cat = fact(a);
+	printf("factorial of the given number is: %d", cat);
+}
+
+
+//Q10. Write a programm in c to solve the problem "Tower of Hanoi"?
+//Code
+#include<stdio.h>
+void trans(int i , char a ,char to ,char from);
+  int main(){
+    int i ;
+    printf("Enter the number of disk for solution  :");
+    scanf("%d",&i);
+    trans(i,'L','R','C');
+}
+void trans(int i , char from ,char to ,char a)
+{
+    if (i>0){
+        trans(i-1,from ,a,to);
+        printf("Move disk %d from %c to %c \n",i,from , to );
+        trans(i-1 ,a ,to ,from);
+    }
+    return ;
+
+    }
+
+
+
+//Q11. Write a programm in c to find the addition of two matrices? 
+//Code:
+
+#include <stdio.h>
+int main ()
+{
+    int A[3][3]={{12,16},{44,26}};
+    int B[3][3]={{5,20},{0,20}};
+    int c[3][3];
+    for (int i=0;i<2;i++)
+    {
+        for(int j=0;j<2;j++)
+        {
+            c[i][j]=A[i][j]+B[i][j];
+        }
+    }
+    printf("The addition of matrix A and matrix B is matrix C : \n");
+    for (int i=0; i<2;i++)
+    {
+        for (int j=0;j<2;j++)
+        {
+            printf("%d  ",c[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+
+}
+
+
+//Q12. Write a programm in c to find the multipication of two matrices of the order m*n and n*p? 
+//Code:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Q13.Write a programm in c to find the transpose of the matrix?
+//Code
+
+#include<stdio.h>
+int main()
+{
+    int n,i,j;
+    printf("enter the size of the matrices(N*N):"); //SIZE OF MATRIX
+    scanf("%d",&n);
+    int original[n][n],transpose[n][n];
+   
+    printf("enter the elements of the  original matrices A:\n");  //INPUT
+    for (i=0; i<n;i++)
+    {
+        for (j=0;j<n;j++)
+        {
+            scanf("%d",&original[i][j]);
+        }
+    }
+    for (i=0; i<n;i++)
+    {
+        for (j=0;j<n;j++)
+        {
+            transpose[i][j]=original[j][i];           
+        }
+    }
+    printf("the original matrix:\n"); //PRINT ORIGINAL MATRIX
+    for (i=0; i<n;i++)
+    {
+        for (j=0;j<n;j++)
+        {
+            printf("|_%d_|  ",original[i][j]);
+        }
+        printf("\n");
+    }
+    printf("the transpose of matrix : \n"); //PRINT TRANSPOSE MATRIX
+    for (i=0; i<n;i++)
+    {
+        for (j=0;j<n;j++)
+        {
+            printf("|_%d_|  ",transpose[i][j]);
+        }
+        printf("\n");
+    }
+    
+}
+
+
+//Q14. SHOPS STORE N  DIFFERENT TYPES OF ITEMS GIVEN THE NUMBER OF ITEMS OF EACH TYPE SOLD DURING A GIVEN MONTH AND THE CORRESSPONDING UNIT PRICES,COMPUTE THE TOTAL MONTHLY SALES....
+//Code
+#include <stdio.h>
+int main() 
+{
+    int n, i;
+    float totalSales = 0;
+    char itemname[20];
+
+    // Input the number of different types of items
+    printf("Enter the number of different types of items: ");
+    scanf("%d", &n);
+    int quantities[n];
+    float unitPrices[n];
+// Input quantities and unit prices
+    printf("Enter the quantities and unit prices of each item:\n");
+    for (i = 0; i < n; i++) 
+    {
+        printf("enter the item name:\n");
+        scanf("%s",itemname);
+        printf("Item  %d____:%s Quantity sold: ", i + 1,itemname);
+        scanf("%d", &quantities[i]);
+        printf("Item %d _____ Unit price: ", i + 1, itemname);
+        scanf("%f", &unitPrices[i]);
+    }
+                                                            // Calculate total sales
+    for (i = 0; i < n; i++)
+    {
+        totalSales += quantities[i] * unitPrices[i];
+    }
+    printf("\nThe total monthly sales amount is: %.2f\n", totalSales);
+    return 0;
+}
+
+
+//Q15. Write a program to find the length of the string?
+//Code:
+#include <stdio.h>
+#include<string.h>
+
+
+int main() {
+    char str[100];
+    int length = 0;
+
+    printf("Enter a string: ");
+    gets (str); 
+
+    while (str[length] != '\0') {
+        length++;
+
+    }
+
+    printf("The length of the string is: %d\n", length);
+    return 0;
+}
+
+
+//Q16.Write a program to converting characters of the string into upper case?
+//Code:
+
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    char uppercase[100];
+    int i;
+    printf("Enter a string: ");         // Input the string
+    fgets(uppercase, sizeof(uppercase), stdin);                                    
+    for (i = 0; uppercase[i] != '\0'; i++)        // Convert each character to uppercase
+    {
+        uppercase[i] = toupper(uppercase[i]);
+    }
+    printf("Uppercase string: %s", uppercase);
+    return 0;
+}
+
+
+//Q17.Write a program to converting characters of the string into lower case?
+//Code:
+#include <stdio.h>
+#include <ctype.h>
+
+int main() 
+{
+    char lowercase[100];
+    int i;
+    printf("Enter a string: ");                 // Input the string
+    fgets(lowercase, sizeof(lowercase), stdin);                                    
+    for (i = 0; lowercase[i] != '\0'; i++)        // Convert each character to uppercase
+    {
+        lowercase[i] = tolower(lowercase[i]);
+    }
+    printf("lowercase string: %s", lowercase);
+    return 0;
+}
+
+//Q18.Write a program to concatenation two string to form a new string?
+//Code:
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str1[100], str2[100];
+    
+    printf("Enter the first string: ");
+    fgets(str1, sizeof(str1), stdin);
+    
+    str1[strcspn(str1, "\n")] = '\0';
+
+    printf("Enter the second string: ");
+    fgets(str2, sizeof(str2), stdin);
+    
+    str2[strcspn(str2, "\n")] = '\0';
+    strcat(str1, str2);
+
+    printf("The concatenated string is: %s\n", str1);
+
+    return 0;
+}
+
+
+//Q19.Write a program to copy from one string to other string?
+//Code:
+#include <stdio.h>
+#include<string.h>
+
+  int main ()
+  { char a[] =("rishu") ;
+  char b[] =("singh");
+  char c[100];
+  printf("%s\t %s \t%s \t" ,a,b,c);
+
+  strcpy(c,a);
+  strcpy(a,b);
+  strcpy(b,a);
+  printf("%s ",a);
+
+  printf("%s ",b);
+
+  printf("%s ",c);
+
+    return 0;
+
+  }
+
+//Q20.Write a program to compare two string?
+//Code:
+#include<stdio.h>
+int main()
+{
+    int i;
+    char str1[100],str2[100];
+    printf("Enter the first string: "); // Input the first string
+    fgets(str1, sizeof(str1), stdin);
+    printf("Enter the second string: "); // Input the second string
+    fgets(str2, sizeof(str2), stdin);
+    for (i = 0; str1[i] != '\0' || str2[i] != '\0'; i++) 
+    {
+        if (str1[i] != str2[i])
+        {
+            printf("the strings are NOT equal:");
+            break;
+        }
+        else
+        {
+            printf("strings are equal");
+            break;
+        }
+    }
+}
+
+//Q21.Write a program to reverse the string?
+//Code:
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char str[100];
+    printf("enter a string:");
+    fgets(str,sizeof(str),stdin);
+    printf("the string in reverse order is:");
+    int a = strlen(str);
+    for(int i=a-1;i>=0;i--)
+    {
+        printf("%c",str[i]);
+
+    }
+}
+
+//Q22.Write a program to extracting a substring from left/right ?
+//Code:
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char str[100];
+    printf("enter a string:");
+    fgets(str,sizeof(str),stdin);
+    printf("right part of string is:");
+    int a = strlen(str);
+    for(int i=a/2;i<a;i++)
+    {
+        printf("%c",str[i]);
+    }
+    printf("left part of string is:");
+    for(int i=0;i<a/2;i++)
+    {
+        printf("%c",str[i]);
+    }
+}
+
+//Q23.Write a program to print hello world using pointer ?
+//Code:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
