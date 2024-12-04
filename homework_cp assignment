@@ -1,50 +1,50 @@
-//Algorithm Questions:
-//Question1. Write an algorithm to swap two numbers
-//1. Start.
-//2. Input numbers x, y.
-//3. Add x and y and store the result in x (i.e., x = x + y).
-//4. Subtract y from new value of x and store the result in y (i.e., y = x - y).
-//5. Subtract the new value of y from the new value of x and store the result
-//in a (i.e., x = x - y).
-//6. Output values of x and y.
-//7. Stop.
+////Algorithm Questions:
+////Question1. Write an algorithm to swap two numbers
+///1. Start.
+///2. Input numbers x, y.
+///3. Add x and y and store the result in x (i.e., x = x + y).
+///4. Subtract y from new value of x and store the result in y (i.e., y = x - y).
+///5. Subtract the new value of y from the new value of x and store the result
+///in a (i.e., x = x - y).
+///6. Output values of x and y.
+///7. Stop.
 
-//Question2. Write an algorithm to find the larger of two numbers
-//1. Start.
-//2. Input two numbers a and b.
-//3. Compare the two numbers:
-//• If a > b, then the larger number is a.
-//• Otherwise, the larger number is b.
-//4. Output the larger number.
-//5. Stop.
+////Question2. Write an algorithm to find the larger of two numbers
+////1. Start.
+////2. Input two numbers a and b.
+////3. Compare the two numbers:
+////• If a > b, then the larger number is a.
+////• Otherwise, the larger number is b.
+////4. Output the larger number.
+////5. Stop.
 
 
-//Question3. Write an algorithm to determine if a number is even or odd
-//1. Start.
-//2. Input the number n.
-//3. Check if n % 2 == 0:
-//• If true, the number is even.
-//• Otherwise, the number is odd.
-//4. Output whether the number is even or odd.
-//5.stop.
+////Question3. Write an algorithm to determine if a number is even or odd
+////1. Start.
+////2. Input the number n.
+////3. Check if n % 2 == 0:
+////• If true, the number is even.
+////• Otherwise, the number is odd.
+////4. Output whether the number is even or odd.
+////5.stop.
 
-//Question4. Algorithm to determine and print the grade:
-//1. Start.
-//2. Input the marks obtained by the student (marks).
-//3. If marks > 75, assign grade 'O'.
-//4. Else if marks >= 60 and marks <= 75, assign grade 'A'.
-//5. Else if marks >= 50 and marks < 60, assign grade 'B'.
-//6. Else if marks >= 40 and marks < 50, assign grade 'C'.
-//7. Else if marks < 40, assign grade ‘D’.
-//8. Output the grade.
-//9. Stop
+////Question4. Algorithm to determine and print the grade:
+////1. Start.
+////2. Input the marks obtained by the student (marks).
+////3. If marks > 75, assign grade 'O'.
+////4. Else if marks >= 60 and marks <= 75, assign grade 'A'.
+////5. Else if marks >= 50 and marks < 60, assign grade 'B'.
+////6. Else if marks >= 40 and marks < 50, assign grade 'C'.
+////7. Else if marks < 40, assign grade ‘D’.
+////8. Output the grade.
+////9. Stop
 
-//Question5. Write an algorithm to find the sum of n natural numbers
-//1. Start.
-//2. Input the value of n and initialize sum = 0.
-//3. Repeat for n times: input a number and add it to sum.
-//4. Output the value of sum.
-//5. Stop.
+////Question5. Write an algorithm to find the sum of n natural numbers
+////1. Start.
+////2. Input the value of n and initialize sum = 0.
+////3. Repeat for n times: input a number and add it to sum.
+////4. Output the value of sum.
+////5. Stop.
 
 
 //Q1. Write a c programm if a number is perfect or not ...(sum of the factor are equal to number)?
