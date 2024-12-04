@@ -1,12 +1,12 @@
 //Algorithm Questions:
 //Question1. Write an algorithm to swap two numbers
 //1. Start.
-//2. Input numbers a, b.
-//3. Add a and b and store the result in a (i.e., a = a + b).
-//4. Subtract b from new value of a and store the result in b (i.e., b = a - b).
+//2. Input numbers x, by.
+//3. Add x and y and store the result in a (i.e., x = x + y).
+//4. Subtract y from new value of a and store the result in b (i.e., y = x - y).
 //5. Subtract the new value of b from the new value of a and store the result
-//in a (i.e., a = a - b).
-//6. Output values of a and b.
+//in a (i.e., x = x - y).
+//6. Output values of x and y.
 //7. Stop.
 
 //Question2. Write an algorithm to find the larger of two numbers
