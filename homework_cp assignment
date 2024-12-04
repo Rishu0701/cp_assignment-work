@@ -1,10 +1,10 @@
 //Algorithm Questions:
 //Question1. Write an algorithm to swap two numbers
 //1. Start.
-//2. Input numbers x, by.
-//3. Add x and y and store the result in a (i.e., x = x + y).
-//4. Subtract y from new value of a and store the result in b (i.e., y = x - y).
-//5. Subtract the new value of b from the new value of a and store the result
+//2. Input numbers x, y.
+//3. Add x and y and store the result in x (i.e., x = x + y).
+//4. Subtract y from new value of x and store the result in y (i.e., y = x - y).
+//5. Subtract the new value of y from the new value of x and store the result
 //in a (i.e., x = x - y).
 //6. Output values of x and y.
 //7. Stop.
