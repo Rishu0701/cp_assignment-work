@@ -874,8 +874,31 @@ void main()
 }
 
 
+//Q32. Extend the complex number program to include function for addition,subtraction,multiplication and divison?
+//Code
+#include<stdio.h>
+struct complex
+{
+    float real;
+    float imaginary;
+};
+int main()
+{
+    struct complex a,b;
+    printf("enter the real no \n :");
+    scanf("%f",a.real);
+    scanf("%f",b.real);
+    printf("enter the complex no :");
+    scanf("%f",a.imaginary);
+    scanf("%f",b.imaginary);
+    printf("sum of complex number %f + %fi",a.real+b.real,a.imaginary+b.imaginary);
+    printf("sub of complex number %f + %fi",a.real-b.real,a.imaginary-b.imaginary);
+    printf("mul of complex number %f + %fi + %fi - %f",a.real*b.real,a.real*b.imaginary,b.imaginary*b.real,a.imaginary*b.imaginary);
+}
 
-//Q32. Write a program in C to count the total number of alphabets, digits and special characters in a string.
+
+
+//Q33. Write a program in C to count the total number of alphabets, digits and special characters in a string.
 //ans.
 #include <stdio.h>
 
@@ -911,7 +934,7 @@ int main() {
 
 
 
-//Q33.Write c code to accept two nxn matrices A and B and print the output C = 2*A + 3*B.
+//Q34.Write c code to accept two nxn matrices A and B and print the output C = 2*A + 3*B.
 //ans.
 //matrix solve
 #include <stdio.h>
@@ -954,7 +977,7 @@ for (int i = 0; i < n; i++)
 
 
 
-//Q34.Write a C program to input elements in array and print all negative elements.
+//Q35.Write a C program to input elements in array and print all negative elements.
 //ans.
 #include<stdio.h>
 int main ()
