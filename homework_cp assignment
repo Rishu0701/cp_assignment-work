@@ -253,9 +253,9 @@ void trans(int i , char from ,char to ,char a)
 #include <stdio.h>
 int main ()
 {
-    int A[3][3]={{12,16},{44,26}};
-    int B[3][3]={{5,20},{0,20}};
-    int c[3][3];
+    int A[2][2]={{12,16},{44,26}};
+    int B[2][2]={{5,20},{0,20}};
+    int c[2][2];
     for (int i=0;i<2;i++)
     {
         for(int j=0;j<2;j++)
@@ -277,33 +277,27 @@ int main ()
 }
 
 
-//Q12. Write a programm in c to find the multipication of two matrices of the order m*n and n*p? 
+//Q12. Write a programm in c to find reursive function to print the sum of the arithematic progression based on the number is even or odd? 
 //Code:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#include <stdio.h>
+int Sum(int n) {
+    if (n <= 0) return 0;
+    if (n % 2 == 0) { 
+        return n + Sum(n - 2);
+    } else { 
+        return n + Sum(n - 2);
+    }
+}
+int main() {
+    int n;
+    printf("Enter positive integer: ");
+    scanf("%d", &n);
+    if (n > 0) {
+        int result = Sum(n);
+        printf("the result is: %d\n", result);
+    }
+    return 0;
+}
 
 
 //Q13.Write a programm in c to find the transpose of the matrix?
@@ -354,6 +348,7 @@ int main()
 }
 
 
+
 //Q14. SHOPS STORE N  DIFFERENT TYPES OF ITEMS GIVEN THE NUMBER OF ITEMS OF EACH TYPE SOLD DURING A GIVEN MONTH AND THE CORRESSPONDING UNIT PRICES,COMPUTE THE TOTAL MONTHLY SALES....
 //Code
 #include <stdio.h>
@@ -389,6 +384,7 @@ int main()
 }
 
 
+
 //Q15. Write a program to find the length of the string?
 //Code:
 #include <stdio.h>
@@ -412,6 +408,7 @@ int main() {
 }
 
 
+
 //Q16.Write a program to converting characters of the string into upper case?
 //Code:
 
@@ -432,6 +429,7 @@ int main() {
 }
 
 
+
 //Q17.Write a program to converting characters of the string into lower case?
 //Code:
 #include <stdio.h>
@@ -450,6 +448,8 @@ int main()
     printf("lowercase string: %s", lowercase);
     return 0;
 }
+
+
 
 //Q18.Write a program to concatenation two string to form a new string?
 //Code:
@@ -477,6 +477,7 @@ int main() {
 }
 
 
+
 //Q19.Write a program to copy from one string to other string?
 //Code:
 #include <stdio.h>
@@ -500,6 +501,8 @@ int main() {
     return 0;
 
   }
+
+
 
 //Q20.Write a program to compare two string?
 //Code:
@@ -527,6 +530,8 @@ int main()
     }
 }
 
+
+
 //Q21.Write a program to reverse the string?
 //Code:
 #include<stdio.h>
@@ -544,6 +549,8 @@ int main()
 
     }
 }
+
+
 
 //Q22.Write a program to extracting a substring from left/right ?
 //Code:
@@ -567,7 +574,150 @@ int main()
     }
 }
 
+
+
 //Q23.Write a program to print hello world using pointer ?
+//Code:
+#include<stdio.h>
+int main()
+{
+    // char a[50] = "helllo world" ;
+    // char *ptr = &a;
+    char *ptr ="Hello world";
+    printf("%s",ptr);
+    return 0 ;
+}
+
+
+
+//Q24.Write a program to find the sum of two numbers using pointers ?
+//Code:
+//Q. addition using pointer 
+#include<stdio.h>
+int main()
+{
+   int a,b ,sum;
+   printf("Enter the  first number   :");
+   scanf("%d",&a);
+   printf("Enter the  second number   :");
+   scanf("%d",&b);
+    sum = a + b ;
+     //printf("%d",sum);
+
+   int *p= &a ;
+   int *q =&b ;
+   int *r =&sum ;
+   printf("%d is the first number entered\n",*p);
+
+    printf("%d is the second number entered \n",*q);
+
+     printf("%d is the sum of the %d and %d\n",*r,*p,*q);
+     return 0 ;
+}
+
+
+
+
+//Q25.Write a program to find the average of two numbers using pointers ?
+//Code:
+#include <stdio.h>
+int main()
+{
+   float a,b,avg;
+   printf("Enter the  first number   :");
+   scanf("%f",&a);
+   printf("Enter the  second number   :");
+   scanf("%f",&b);
+    avg = (a + b)/2 ;
+  
+
+   float *p= &a ;
+   float *q =&b ;
+   float *r =&avg ;
+   printf("%f is the first number entered\n",*p);
+
+    printf("%f is the second number entered \n",*q);
+
+     printf("%f is the avg of the %f and %f\n",*r,*p,*q);
+     
+     return 0 ;
+}
+
+
+
+//Q26.Write a program to add two floating point number using pointers ?
+//Code:
+#include <stdio.h>
+int main()
+{
+   float a,b,sum;
+   printf("Enter the  first number   :");
+   scanf("%f",&a);
+   printf("Enter the  second number   :");
+   scanf("%f",&b);
+    sum = (a + b) ;
+  
+
+   float *p= &a ;
+   float *q =&b ;
+   float *r =&sum ;
+   printf("%f is the first number entered\n",*p);
+
+    printf("%f is the second number entered \n",*q);
+
+     printf("%0.1f is the avg of the %f and %f\n",*r,*p,*q);
+     
+     return 0 ;
+}
+
+
+
+//Q27.Write a program to  calculate the area of a circle using pointers ?
+//Code:
+#include <stdio.h>
+int main()
+{
+   float r,area;
+   printf("Enter the radius   :");
+   scanf("%f",&r);
+
+    area = 3.14 * r*r ;
+  
+
+   float *p= &r ;
+   float *q =&area ;
+  
+   printf("%f is the radius entered\n",*p);
+
+     printf("%0.2f is the area of the circle having radius   %f \n",*q,*p);
+     
+     return 0 ;
+}
+
+
+
+//Q28.Declare a structure variable Country, to be of structure type country. This structure variable holds :
+//– a string called name having 30 characters,
+//– an integer variable population and
+//– a string called language with 15 characters.
+//– Declare, three structure variables India, Japan, Indonesia in this structure named country.?
+//Code:
+#include<stdio.h>
+struct country
+{
+    char name [30];
+    int population;
+    char language[15];
+
+
+}india , japan ,indonesia;
+
+int main (){
+
+}
+
+
+//Q28.Write a program to Declare new data type called date. Consists of three basic data elements ( month, day and year), all of type integer and and sensex as float. ?
 //Code:
 
 
