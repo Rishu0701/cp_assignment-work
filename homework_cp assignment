@@ -719,7 +719,15 @@ int main (){
 
 //Q28.Write a program to Declare new data type called date. Consists of three basic data elements ( month, day and year), all of type integer and and sensex as float. ?
 //Code:
-
+#include<stdio.h>
+struct date
+{
+    int month;
+    int date;
+    int year;
+    float sensex;
+};
+struct  date date1 ,date2 , date3; 
 
 
 
