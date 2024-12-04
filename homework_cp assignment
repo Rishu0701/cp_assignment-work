@@ -717,7 +717,7 @@ int main (){
 }
 
 
-//Q28.Write a program to Declare new data type called date. Consists of three basic data elements ( month, day and year), all of type integer and and sensex as float. ?
+//Q29.Write a program to Declare new data type called date. Consists of three basic data elements ( month, day and year), all of type integer and and sensex as float. ?
 //Code:
 #include<stdio.h>
 struct date
@@ -728,6 +728,211 @@ struct date
     float sensex;
 };
 struct  date date1 ,date2 , date3; 
+
+
+//Q30.swap two number by using pointers and function.
+//ans.
+#include<stdio.h>
+ void swap (int *x ,int *y){
+    int temp ;
+   temp = *x;
+   *x = *y;
+   *y = temp;
+    return ;
+
+}
+
+  int main(){
+    int a,b;
+    printf("Enter the first number :");
+    scanf("%d",&a);
+    printf("Enter the second number :");
+    scanf("%d",&b);
+
+    swap(&a ,& b);
+    printf("%d\n",a);
+    printf("%d",b);
+
+    return 0;
+
+  }
+
+
+
+
+
+
+
+//Q31. Create a structure named Book to store book details like title, author, and price. Write a C program to input details for three books, find the most expensive and the lowest priced books, and display their information
+//ans.
+#include<stdio.h>
+#include<string.h>
+struct book
+{
+    char booktitle[25];
+    int price;
+    char author[25];
+
+};
+void main()
+{
+    struct book b1,b2,b3;
+    strcpy(b1.booktitle,"ncert chem");
+    strcpy(b2.booktitle,"jungle book");
+    strcpy(b3.booktitle,"wing of fire");
+    b1.price=300;
+    b2.price=200;
+    b3.price=150;
+    strcpy(b1.author,"robin sharma");
+    strcpy(b2.author,"paulo cohelo");
+    strcpy(b3.author,"arun tiwari");
+    printf("the name of the first book:\n%s\n\n",b1.booktitle);
+    printf("the name of the second book:\n%s\n\n",b2.booktitle);
+    printf("the name of the third book:\n%s\n\n",b3.booktitle);
+    printf("the author of the first book:\n%s\n\n",b1.author);
+    printf("the author of the second book:\n%s\n\n",b2.author);
+    printf("the author of the third book:\n%s\n\n",b3.author);
+    printf("the price of the first book:\n%d\n\n",b1.price);
+    printf("the price of the second book:\n%d\n\n",b2.price);
+    printf("the price of the third book:\n%d\n\n",b3.price);
+    if (b1.price>b2.price && b1.price>b3.price)
+    {
+        printf("\nbook 1 is a most expensive one \n\n");
+    }
+    else if (b2.price>b1.price && b2.price>b3.price)
+    {
+        printf("book 2 is a most expensive one \n\n");
+
+    }
+    else
+    {
+        printf("book 3 is the  most expensive one\n\n");
+    }
+     if (b1.price<b2.price && b1.price<b3.price)
+    {
+        printf("book 1 is a most lowest one \n\n");
+    }
+    else if (b2.price<b1.price && b2.price<b3.price)
+    {
+        printf("book 2 is a most lowest one \n\n");
+
+    }
+    else
+    {
+        printf("book 3 is the  most lowest one\n\n");
+    }
+   
+}
+
+
+
+//Q32. Write a program in C to count the total number of alphabets, digits and special characters in a string.
+//ans.
+#include <stdio.h>
+
+int main() {
+    char str[100];  
+    int i, alphabets = 0, digits = 0, specials = 0;
+
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);  
+
+    for (i = 0; str[i] != '\0'; i++) {
+       
+        if ((str[i] >= 'A' && str[i] <= 'Z') || (str[i] >= 'a' && str[i] <= 'z')) {
+            alphabets++;
+        }
+    
+        else if (str[i] >= '0' && str[i] <= '9') {
+            digits++;
+        }
+    
+        else if (str[i] != ' ' && str[i] != '\t' && str[i] != '\n') {  
+            specials++;
+        }
+    }
+
+    printf("Alphabets: %d\n", alphabets);
+    printf("Digits: %d\n", digits);
+    printf("Special characters: %d\n", specials);
+
+    return 0;
+}
+
+
+
+
+//Q33.Write c code to accept two nxn matrices A and B and print the output C = 2*A + 3*B.
+//ans.
+//matrix solve
+#include <stdio.h>
+
+int main() {
+    int n;
+
+    printf("\nEnter the size : ");
+    scanf("%d", &n);
+
+    int A[n][n], B[n][n], C[n][n];
+
+    printf("Enter elements  A:  ");
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < n; j++)
+            scanf("%d", &A[i][j]);
+
+    printf("Enter elements  B:");
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < n; j++)
+            scanf("%d", &B[i][j]);
+
+
+for (int i = 0; i < n; i++)
+        for (int j = 0; j < n; j++)
+            C[i][j] = 2 * A[i][j] + 3 * B[i][j];
+
+    
+    printf("Matrix C = 2*A + 3*B:\n");
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++){
+            printf("\n%d \t", C[i][j]);
+            //printf("\t ");
+        }
+    
+    }
+
+    return 0;
+}
+
+
+
+//Q34.Write a C program to input elements in array and print all negative elements.
+//ans.
+#include<stdio.h>
+int main ()
+{
+    int n ;
+      printf("Enter the number of element in the array:  ");
+      scanf("%d",&n);
+
+   int  arr[n];
+
+   printf("Enter the %d element\n",n);
+   for ( int i=0 ; i<n ; i++){
+            printf("Enter elements  :");
+            scanf("%d",&arr[i]);
+   }
+   
+   printf(" negative elements are : ");
+   for (int i=0; i<n ;i++){
+      if (arr[i]<0){
+
+    printf("%d\n",arr[i]);}
+
+   }
+   return 0;
+}
+
+
 
 
 
